@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>algultseCV</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+      max-width: 1000px;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+    .box {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .header {
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .photo {
+      width: 120px;
+      height: 120px;
+      background-color: #ddd;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .info h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #2c3e50;
+    }
+    .info p {
+      margin: 4px 0;
+      color: #333;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box header">
+      <div class="photo">
+        <img src="./photo/algultsePhoto.png" alt="algultsePhoto">
+      </div>
+      <div class="info">
+        <h1>Alla Gultseva</h1>
+        <p><strong>Junior TypeScript / Backend Developer</strong></p>
+        <p>📍 Paris, France</p>
+        <p>💻 <a href="https://github.com/N0fish">github.com/N0fish</a></p>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Education</h2>
+      <p><strong>École 42 Paris</strong> — Software Engineering Program (2023–Present)</p>
+      <p><strong>St. Petersburg State Institute of Culture</strong> — Drama and Film Acting (2014–2018)</p>
+    </div>
+
+    <div class="box">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> TypeScript, JavaScript, Node.js, Python, C, C++</li>
+        <li><strong>Backend:</strong> Fastify, WebSocket, Prisma</li>
+        <li><strong>DevOps:</strong> Docker, docker-compose, TLS</li>
+        <li><strong>Frontend:</strong> Basic HTML/CSS, canvas, DOM</li>
+        <li><strong>Database:</strong> SQL, MariaDB</li>
+        <li><strong>Tools:</strong> Docker, Git, Makefile</li>
+        <li><strong>Concepts:</strong> Microservices, WebSockets, security</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Selected Projects</h2>
+      <p><strong>ft_transcendence</strong> (2025)<br>
+      Multiplayer Pong (TypeScript + Node.js) with WebSocket, JWT, Docker</p>
+
+      <p><strong>Inception</strong> (2025)<br>
+      Docker infrastructure with MariaDB, WordPress, NGINX, TLS</p>
+
+      <p><strong>Minishell</strong> (2024)<br>
+      Shell in C with pipes, signals, environment, heredoc</p>
+
+      <p><strong>ft_irc</strong> (2025)<br>
+      IRC server in C++ based on RFC, with sockets, poll, multi-user chat, channels</p>
+
+      <p><strong>C++ Modules</strong> (2025)<br>
+      OOP: classes, inheritance, polymorphism, templates, STL</p>
+    </div>
+
+    <div class="box">
+      <h2>Experience</h2>
+      <p><strong>Programming Instructor (Freelance)</strong> — 2022–2023</p>
+      <ul>
+        <li>Taught Python and algorithms to students</li>
+        <li>Created workshops and exercises</li>
+        <li>Mentored learners on logic, debugging and clean coding</li>
+      </ul>
+    </div>
+
+    <div class="box" style="grid-column: span 2;">
+      <h2>Additional</h2>
+      <ul>
+        <li>Enthusiastic about continuous learning, creative work, and traveling</li>
+        <li>Project-based, autonomous, and collaborative work</li>
+        <li>Currently seeking  <strong>TypeScript</strong> backend <strong>internship</strong> or <strong>alternance</strong></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
