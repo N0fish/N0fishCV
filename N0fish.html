@@ -15,6 +15,7 @@
       align-items: center;
     }
     .container {
+      position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto auto;
@@ -22,6 +23,29 @@
       max-width: 1000px;
       padding: 2rem;
       box-sizing: border-box;
+    }
+    /* .languages {
+      position: absolute;
+      top: 66px;
+      right: 40px;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      font-size: 20px;
+      color: #333;
+      font-weight: 600;
+      line-height: 2.8;
+    } */
+    .languages {
+      position: absolute;
+      top: 70px;
+      right: 53px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 17px;
+      color: #333;
+      font-weight: 600;
+      line-height: 1.0;
     }
     .box {
       background: #fff;
@@ -80,6 +104,13 @@
 </head>
 <body>
   <div class="container">
+    <div class="languages">
+      <span>en</span>
+      <span>·</span>
+      <span>fr</span>
+      <span>·</span>
+      <span>ru</span>
+    </div>
     <div class="box header">
       <div class="photo">
         <img src="./photo/algultsePhoto.png" alt="algultsePhoto">
