@@ -99,6 +99,30 @@
     a:hover {
       text-decoration: underline;
     }
+    @media print {
+      body {
+        padding: 0;
+        margin: 0;
+        background: white;
+      }
+      .container {
+        padding: 0 !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      /* .box {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 1rem !important;
+      } */
+      .languages {
+        display: none !important;
+      }
+      a[href]:after {
+        content: "" !important;
+      }
+    }
   </style>
 </head>
 <body>

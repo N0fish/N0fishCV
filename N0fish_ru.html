@@ -99,6 +99,30 @@
     a:hover {
       text-decoration: underline;
     }
+    @media print {
+      body {
+        padding: 0;
+        margin: 0;
+        background: white;
+      }
+      .container {
+        padding: 0 !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      .box {
+        /* box-shadow: none !important; */
+        /* border: none !important; */
+        padding: 1.0rem !important;
+      }
+      .languages {
+        display: none !important;
+      }
+      a[href]:after {
+        content: "" !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -109,7 +133,6 @@
       <a href="https://n0fish.github.io/N0fishCV/N0fish_fr.html">fr</a>
       <span>·</span>
       <span>ru</span>
-      <!-- <a href="https://n0fish.github.io/N0fishCV/N0fish_ru.html">ru</a> -->
     </div>
     <div class="box header">
       <div class="photo">
@@ -125,8 +148,8 @@
 
     <div class="box">
       <h2>Образование</h2>
-      <p><strong>École 42 Paris</strong> — Программа по программной инженерии (2023–настоящее время)</p>
-      <p><strong>Санкт-Петербургский государственный институт культуры</strong> — Актёр драматического театра и кино (2014–2018)<p>
+      <p><strong>École 42 Paris</strong> — Программа по разработке программного обеспечения (2023–настоящее время)</p>
+      <p><strong>СПБГИК</strong> — Актёр драматического театра и кино (2014–2018)<p>
     </div>
 
     <div class="box" style="grid-row: span 2;">
@@ -151,7 +174,7 @@
       Docker-инфраструктура с MariaDB, WordPress, NGINX, TLS</p>
 
       <p><strong>Minishell</strong> (2024)<br>
-      Собственная оболочка(Shell) на C с пайпами, сигналами, переменными окружения, heredoc</p>
+      Собственная оболочка(Shell) на C с поддержкой пайпов, сигналов, переменных окружения, heredoc</p>
 
       <p><strong>ft_irc</strong> (2025)<br>
       IRC-сервер на C++ по RFC: сокеты, poll, многопользовательский чат, каналы</p>
