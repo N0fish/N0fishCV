@@ -4,124 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <title>algultseCV_ru</title>
+  <link rel="stylesheet" href="./css/styles.css">
   <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
+    .left-column,
+    .right-column {
       display: flex;
       flex-direction: column;
-      align-items: center;
-    }
-    .container {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
       gap: 10px;
-      max-width: 1000px;
-      padding: 2rem;
-      box-sizing: border-box;
     }
-    .languages {
-      position: absolute;
-      top: 70px;
-      right: 53px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 17px;
-      color: #333;
-      font-weight: 600;
-      line-height: 1.0;
+
+    .left-column {
+      grid-column: 1;
+      grid-row: 2;
     }
-    .languages a {
-      color: #007accd6;
-      text-decoration: none;
-      font-weight: revert;
-      transition: color 0.2s ease;
+
+    .right-column {
+      grid-column: 2;
+      grid-row: 2;
     }
-    .languages a:hover {
-      color: #007acc;
-      cursor: pointer;
-    }
-    .box {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 1.3rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    .header {
-      grid-column: span 2;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-    .photo {
-      width: 120px;
-      height: 120px;
-      background-color: #ddd;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .projects {
-    align-self: end;
-    }
-    .info h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #2c3e50;
-    }
-    .info p {
-      margin: 4px 0;
-      color: #333;
-    }
-    h2 {
-      color: #2c3e50;
-      margin-top: 0;
-      margin-bottom: 6px;
-    }
-    ul {
-      padding-left: 1.2em;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    @media print {
-      body {
-        padding: 0;
-        margin: 0;
-        background: white;
-      }
-      .container {
-        padding: 0 !important;
-        max-width: 100% !important;
-        box-shadow: none !important;
-        border: none !important;
-      }
-      .box {
-        /* box-shadow: none !important; */
-        /* border: none !important; */
-        padding: 1.0rem !important;
-      }
-      .languages {
-        display: none !important;
-      }
-      a[href]:after {
-        content: "" !important;
-      }
+
+    .left-column > .box:first-child,
+    .right-column > .box:first-child {
+      flex: 1;
     }
   </style>
 </head>
@@ -140,68 +44,77 @@
       </div>
       <div class="info">
         <h1>Alla Gultseva</h1>
-        <p><strong>Junior TypeScript & Python | Backend-разработчик</strong></p>
+        <p><strong>Junior Go · TypeScript · Python | Backend-разработчик</strong></p>
         <p>📍 Париж, Франция</p>
         <p>💻 <a href="https://github.com/N0fish">github.com/N0fish</a></p>
       </div>
     </div>
 
-    <div class="box">
-      <h2>Образование</h2>
-      <p><strong>École 42 Paris</strong> — Программа по разработке программного обеспечения (2023–настоящее время)</p>
-      <p><strong>СПБГИК</strong> — Актёр драматического театра и кино (2014–2018)<p>
+    <div class="left-column">
+      <div class="box">
+        <h2>Образование</h2>
+        <p><strong>École 42 Paris</strong> — Программа по разработке программного обеспечения (2023–настоящее время)</p>
+        <p><strong>СПБГИК</strong> — Актёр драматического театра и кино (2014–2018)<p>
+      </div>
+
+
+      <div class="box">
+        <h2>Выбранные проекты</h2>
+        <p><strong>MusicRoom</strong> (2025)<br>
+        Микросервисный бэкенд на Go с Chi, pgx, Redis; API gateway, auth, пользователи, playlists, голосование, music provider, события в реальном времени.</p>
+
+        <p><strong>laposte</strong> (2025)<br>
+        Сервис email-рассылки на TypeScript, gRPC broker, Nodemailer, i18n-шаблоны на основе конфигурации.</p>
+
+        <p><strong>Leaffliction</strong> (2025)<br>
+        Computer vision на Python: анализ dataset, аугментации, преобразования изображений, обучение ML-модели.</p>
+
+        <p><strong>ft_transcendence</strong> (2025)<br>
+        Многопользовательский Pong (TypeScript + Node.js) с WebSocket, JWT, Docker</p>
+
+        <p><strong>Inception</strong> (2025)<br>
+        Docker-инфраструктура с MariaDB, WordPress, NGINX, TLS</p>
+
+        <p><strong>ft_irc</strong> (2025)<br>
+        IRC-сервер на C++ по RFC: сокеты, poll, многопользовательский чат, каналы</p>
+      </div>
     </div>
 
-    <div class="box" style="grid-row: span 2;">
-      <h2>Технические навыки</h2>
-      <ul>
-        <li><strong>Языки:</strong> TypeScript, JavaScript, Node.js, Python, C, C++</li>
-        <li><strong>Backend:</strong> Fastify, WebSocket, Prisma</li>
-        <li><strong>DevOps:</strong> Docker, docker-compose, TLS</li>
-        <li><strong>Frontend:</strong> Basic HTML/CSS, canvas</li>
-        <li><strong>Database:</strong> SQL, MariaDB</li>
-        <li><strong>Инструменты:</strong> Git, Makefile</li>
-        <li><strong>Концепции:</strong> Microservices, WebSockets, security</li>
-      </ul>
+    <div class="right-column">
+      <div class="box">
+        <h2>Технические навыки</h2>
+        <ul>
+          <li><strong>Языки:</strong> Go, TypeScript/JavaScript (Node.js), Python, C, C++</li>
+          <li><strong>Backend:</strong> Chi (router), Fastify, Prisma, Machine Learning</li>
+          <li><strong>DevOps:</strong> Docker, docker-compose, TLS</li>
+          <li><strong>Frontend:</strong> Basic HTML/CSS</li>
+          <li><strong>Database:</strong> SQL, PostgreSQL, MariaDB</li>
+          <li><strong>Инструменты:</strong> Git, Makefile, Swagger/OpenAPI, Nodemailer</li>
+          <li><strong>Концепции:</strong> Microservices, REST/gRPC APIs, WebSockets, security</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Опыт</h2>
+        <p><strong>Преподаватель программирования (фриланс)</strong> — 2022–2023</p>
+        <ul>
+          <li>Обучение студентов Python и алгоритмам</li>
+          <li>Создание упражнений и воркшопов</li>
+          <li>Наставничество в логике, отладке и чистом коде</li>
+        </ul>
+      </div>
+
+      <div class="box" style="grid-column: span 2;">
+        <h2>Дополнительно</h2>
+        <ul>
+          <li>Увлекаюсь непрерывным обучением, креативной работой и путешествиями</li>
+          <li>Работаю автономно, проектно и в команде</li>
+          <li>В поиске <strong>стажировки</strong> или <strong>alternance</strong> в области бэкенда на <strong>Go</strong>, <strong>Python</strong> или <strong>TypeScript</strong></li>
+          <li>Языки: французский (средний уровень), русский (родной)</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="box" style="grid-row: span 2;">
-      <h2>Выбранные проекты</h2>
-      <p><strong>ft_transcendence</strong> (2025)<br>
-      Многопользовательский Pong (TypeScript + Node.js) с WebSocket, JWT, Docker</p>
-
-      <p><strong>Inception</strong> (2025)<br>
-      Docker-инфраструктура с MariaDB, WordPress, NGINX, TLS</p>
-
-      <p><strong>Minishell</strong> (2024)<br>
-      Собственная оболочка(Shell) на C с поддержкой пайпов, сигналов, переменных окружения, heredoc</p>
-
-      <p><strong>ft_irc</strong> (2025)<br>
-      IRC-сервер на C++ по RFC: сокеты, poll, многопользовательский чат, каналы</p>
-
-      <p><strong>C++ Modules</strong> (2025)<br>
-      ООП: классы, наследование, полиморфизм, шаблоны, STL</p>
-    </div>
-
-    <div class="box">
-      <h2>Опыт</h2>
-      <p><strong>Преподаватель программирования (фриланс)</strong> — 2022–2023</p>
-      <ul>
-        <li>Обучение студентов Python и алгоритмам</li>
-        <li>Создание упражнений и воркшопов</li>
-        <li>Наставничество в логике, отладке и чистом коде</li>
-      </ul>
-    </div>
-
-    <div class="box" style="grid-column: span 2;">
-      <h2>Дополнительно</h2>
-      <ul>
-        <li>Увлекаюсь непрерывным обучением, креативной работой и путешествиями</li>
-        <li>Работаю автономно, проектно и в команде</li>
-        <li>В поиске <strong>стажировки</strong> или <strong>альтернанс</strong> как backend-разработчик на <strong>TypeScript</strong> или <strong>Python</strong></li>
-        <li>Языки: французский (средний уровень), русский (родной)</li>
-      </ul>
-    </div>
   </div>
 </body>
 </html>
