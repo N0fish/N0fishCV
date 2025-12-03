@@ -1,129 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>algultseCV</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .container {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
-      gap: 10px;
-      max-width: 1000px;
-      padding: 2rem;
-      box-sizing: border-box;
-    }
-    .languages {
-      position: absolute;
-      top: 70px;
-      right: 53px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 17px;
-      color: #333;
-      font-weight: 600;
-      line-height: 1.0;
-    }
-    .languages a {
-      color: #007accd6;
-      text-decoration: none;
-      font-weight: revert;
-      transition: color 0.2s ease;
-    }
-    .languages a:hover {
-      color: #007acc;
-      cursor: pointer;
-    }
-    .box {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 1.3rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    .header {
-      grid-column: span 2;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-    .photo {
-      width: 120px;
-      height: 120px;
-      background-color: #ddd;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .projects {
-    align-self: end;
-    }
-    .info h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #2c3e50;
-    }
-    .info p {
-      margin: 4px 0;
-      color: #333;
-    }
-    h2 {
-      color: #2c3e50;
-      margin-top: 0;
-      margin-bottom: 6px;
-    }
-    ul {
-      padding-left: 1.2em;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    @media print {
-      body {
-        padding: 0;
-        margin: 0;
-        background: white;
-      }
-      .container {
-        padding: 0 !important;
-        max-width: 100% !important;
-        box-shadow: none !important;
-        border: none !important;
-      }
-      /* .box {
-        box-shadow: none !important;
-        border: none !important;
-        padding: 1rem !important;
-      } */
-      .languages {
-        display: none !important;
-      }
-      a[href]:after {
-        content: "" !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <div class="container">
@@ -140,68 +20,76 @@
       </div>
       <div class="info">
         <h1>Alla Gultseva</h1>
-        <p><strong>Junior TypeScript & Python | Backend Developer</strong></p>
+        <p><strong>Junior Go · TypeScript · Python | Backend Developer</strong></p>
         <p>📍 Paris, France</p>
         <p>💻 <a href="https://github.com/N0fish">github.com/N0fish</a></p>
       </div>
     </div>
 
-    <div class="box">
-      <h2>Education</h2>
-      <p><strong>École 42 Paris</strong> — Software Engineering Program (2023–Present)</p>
-      <p><strong>St. Petersburg State Institute of Culture</strong> — Drama and Film Acting (2014–2018)</p>
+    <div class="left-column">
+      <div class="box">
+        <h2>Education</h2>
+        <p><strong>École 42 Paris</strong> — Software Engineering Program (2023–Present)</p>
+        <p><strong>St. Petersburg State Institute of Culture</strong> — Drama and Film Acting (2014–2018)</p>
+      </div>
+
+      <div class="box">
+        <h2>Selected Projects</h2>
+        <p><strong>MusicRoom</strong> (2025)<br>
+        Go microservices backend using Chi, pgx, Redis; API gateway, auth, users, playlists, voting, music provider, real-time events.</p>
+
+        <p><strong>laposte</strong> (2025)<br>
+        Event-driven email service in TypeScript, gRPC broker, Nodemailer, config-based i18n templates.</p>
+
+        <p><strong>Leaffliction</strong> (2025)<br>
+        Computer vision in Python using dataset analysis, augmentation, transformations, ML training.</p>
+
+        <p><strong>ft_transcendence</strong> (2025)<br>
+        Multiplayer Pong (TypeScript + Node.js) with WebSocket, JWT, Docker</p>
+
+        <p><strong>Inception</strong> (2025)<br>
+        Docker infrastructure with MariaDB, WordPress, NGINX, TLS</p>
+
+        <p><strong>ft_irc</strong> (2025)<br>
+        IRC server in C++ based on RFC, with sockets, poll, multi-user chat, channels</p>
+      </div>
     </div>
 
-    <div class="box" style="grid-row: span 2;">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> TypeScript, JavaScript, Node.js, Python, C, C++</li>
-        <li><strong>Backend:</strong> Fastify, WebSocket, Prisma</li>
-        <li><strong>DevOps:</strong> Docker, docker-compose, TLS</li>
-        <li><strong>Frontend:</strong> Basic HTML/CSS, canvas</li>
-        <li><strong>Database:</strong> SQL, MariaDB</li>
-        <li><strong>Tools:</strong> Git, Makefile</li>
-        <li><strong>Concepts:</strong> Microservices, WebSockets, security</li>
-      </ul>
+    <div class="right-column">
+      <div class="box">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> Go, TypeScript/JavaScript (Node.js), Python, C, C++</li>
+          <li><strong>Backend:</strong> Chi (router), Fastify, Prisma, Machine Learning</li>
+          <li><strong>DevOps:</strong> Docker, docker-compose, TLS</li>
+          <li><strong>Frontend:</strong> Basic HTML/CSS</li>
+          <li><strong>Database:</strong> SQL, PostgreSQL, MariaDB</li>
+          <li><strong>Tools:</strong> Git, Makefile, Swagger/OpenAPI, Nodemailer</li>
+          <li><strong>Concepts:</strong> Microservices, REST/gRPC APIs, WebSockets, security</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Experience</h2>
+        <p><strong>Programming Instructor (Freelance)</strong> — 2022–2023</p>
+        <ul>
+          <li>Taught Python and algorithms to students</li>
+          <li>Created workshops and exercises</li>
+          <li>Mentored learners on logic, debugging and clean coding</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Additional</h2>
+        <ul>
+          <li>Enthusiastic about continuous learning, creative work, and traveling</li>
+          <li>Project-based, autonomous, and collaborative work</li>
+          <li>Currently seeking a backend <strong>internship</strong> or <strong>alternance</strong> in <strong>Go</strong>, <strong>Python</strong>, or <strong>TypeScript</strong></li>
+          <li>Languages: French (intermediate), Russian (native)</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="box" style="grid-row: span 2;">
-      <h2>Selected Projects</h2>
-      <p><strong>ft_transcendence</strong> (2025)<br>
-      Multiplayer Pong (TypeScript + Node.js) with WebSocket, JWT, Docker</p>
-
-      <p><strong>Inception</strong> (2025)<br>
-      Docker infrastructure with MariaDB, WordPress, NGINX, TLS</p>
-
-      <p><strong>Minishell</strong> (2024)<br>
-      Shell in C with pipes, signals, environment, heredoc</p>
-
-      <p><strong>ft_irc</strong> (2025)<br>
-      IRC server in C++ based on RFC, with sockets, poll, multi-user chat, channels</p>
-
-      <p><strong>C++ Modules</strong> (2025)<br>
-      OOP: classes, inheritance, polymorphism, templates, STL</p>
-    </div>
-
-    <div class="box">
-      <h2>Experience</h2>
-      <p><strong>Programming Instructor (Freelance)</strong> — 2022–2023</p>
-      <ul>
-        <li>Taught Python and algorithms to students</li>
-        <li>Created workshops and exercises</li>
-        <li>Mentored learners on logic, debugging and clean coding</li>
-      </ul>
-    </div>
-
-    <div class="box" style="grid-column: span 2;">
-      <h2>Additional</h2>
-      <ul>
-        <li>Enthusiastic about continuous learning, creative work, and traveling</li>
-        <li>Project-based, autonomous, and collaborative work</li>
-        <li>Currently seeking a <strong>TypeScript</strong> or <strong>Python</strong> backend <strong>internship</strong> or <strong>alternance</strong></li>
-        <li>Languages: French (intermediate), Russian (native)</li>
-      </ul>
-    </div>
   </div>
 </body>
 </html>
